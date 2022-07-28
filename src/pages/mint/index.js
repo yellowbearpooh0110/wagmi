@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
 
 import './styles.scss';
 
@@ -12,8 +11,6 @@ import Contactus from 'components/Contactus';
 import Footer from 'components/Footer';
 
 const Mint = () => {
-  const { active, account, activate, deactivate, error, chainId } =
-    useWeb3React();
   return (
     <>
       <Navbar />

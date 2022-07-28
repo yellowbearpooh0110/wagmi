@@ -18,7 +18,6 @@ const Membership = () => {
     chainId,
     active: networkActive,
     activate: activateNetwork,
-    error: networkError,
     account,
     library,
   } = useWeb3React();
@@ -28,6 +27,26 @@ const Membership = () => {
   const [costAurora, setCostAurora] = React.useState(undefined);
   const [costNova, setCostNova] = React.useState(undefined);
   const [costSuperNova, setCostSuperNova] = React.useState(undefined);
+
+  const handleClickThumbnail = (event) => {
+    event.preventDefault();
+    const thumbnail = event.currentTarget;
+    const videoCard = thumbnail.nextSibling;
+    console.dir(videoCard);
+    thumbnail.style.display = 'none';
+    videoCard.style.display = 'block';
+    videoCard.play();
+    videoCard.addEventListener(
+      'ended',
+      function () {
+        videoCard.pause();
+        videoCard.style.display = 'none';
+        thumbnail.style.display = 'block';
+        videoCard.currentTime = 0;
+      },
+      false
+    );
+  };
 
   const handleMintGenesis = (event) => {
     event.preventDefault();
@@ -92,10 +111,7 @@ const Membership = () => {
       );
       /* Set Main Contract */
       setWagmiClubContract(_wagmiClubContract);
-      _wagmiClubContract.costGenesis().then((_price) => {
-        console.log(_price);
-        setCostGenesis(_price);
-      });
+      _wagmiClubContract.costGenesis().then((_price) => setCostGenesis(_price));
       _wagmiClubContract.costAurora().then((_price) => setCostAurora(_price));
       _wagmiClubContract.costNova().then((_price) => setCostNova(_price));
       _wagmiClubContract
@@ -160,7 +176,10 @@ const Membership = () => {
           </div>
           <div className="col-lg-7">
             <div className="membership__mintv">
-              <div className="membership__thumnail">
+              <div
+                className="membership__thumnail"
+                onClick={handleClickThumbnail}
+              >
                 <img src={genesisImg} alt="genesis" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
@@ -213,7 +232,10 @@ const Membership = () => {
         <div className="row align-items-center">
           <div className="col-lg-7">
             <div className="membership__mintv">
-              <div className="membership__thumnail">
+              <div
+                className="membership__thumnail"
+                onClick={handleClickThumbnail}
+              >
                 <img src={auroraImg} alt="aurora" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
@@ -352,7 +374,10 @@ const Membership = () => {
           </div>
           <div className="col-lg-7">
             <div className="membership__mintv">
-              <div className="membership__thumnail">
+              <div
+                className="membership__thumnail"
+                onClick={handleClickThumbnail}
+              >
                 <img src={novaImg} alt="nova" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
@@ -402,7 +427,10 @@ const Membership = () => {
         <div className="row align-items-center">
           <div className="col-lg-7">
             <div className="membership__mintv">
-              <div className="membership__thumnail">
+              <div
+                className="membership__thumnail"
+                onClick={handleClickThumbnail}
+              >
                 <img src={supernovaImg} alt="supernova" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
