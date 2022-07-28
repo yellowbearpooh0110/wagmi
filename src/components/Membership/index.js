@@ -164,7 +164,10 @@ const Membership = () => {
                 <img src={genesisImg} alt="genesis" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
-                <source src="./video/genesis.mp4" type="video/mp4" />
+                <source
+                  src="https://mywagmi.com/video/genesis.mp4"
+                  type="video/mp4"
+                />
               </video>
               <button
                 className="memberbtn d-lg-none"
@@ -214,7 +217,10 @@ const Membership = () => {
                 <img src={auroraImg} alt="aurora" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
-                <source src="./video/aurora.mp4" type="video/mp4" />
+                <source
+                  src="https://mywagmi.com/video/aurora.mp4"
+                  type="video/mp4"
+                />
               </video>
               <button
                 className="memberbtn d-lg-none"
@@ -350,7 +356,10 @@ const Membership = () => {
                 <img src={novaImg} alt="nova" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
-                <source src="./video/nova.mp4" type="video/mp4" />
+                <source
+                  src="https://mywagmi.com/video/nova.mp4"
+                  type="video/mp4"
+                />
               </video>
               <button className="memberbtn d-lg-none">
                 <svg
@@ -397,7 +406,10 @@ const Membership = () => {
                 <img src={supernovaImg} alt="supernova" />
               </div>
               <video muted="muted" autoPlay className="membervideo">
-                <source src="./video/supernova.mp4" type="video/mp4" />
+                <source
+                  src="https://mywagmi.com/video/supernova.mp4"
+                  type="video/mp4"
+                />
               </video>
               <button className="memberbtn d-lg-none">
                 <svg
