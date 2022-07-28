@@ -1,27 +1,31 @@
 import * as React from 'react';
 import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
-import { InjectedConnector } from '@web3-react/injected-connector';
 
 import './styles.scss';
 import genesisImg from 'img/genesis.png';
 import auroraImg from 'img/aurora.png';
 import novaImg from 'img/nova.png';
 import supernovaImg from 'img/supernova.png';
+import { injectedConnector } from 'App';
 
 const Membership = () => {
-  const { active, account, activate, deactivate, error, chainId } =
-    useWeb3React();
+  const {
+    chainId,
+    active: networkActive,
+    activate: activateNetwork,
+    error: networkError,
+  } = useWeb3React();
 
   const handleMintGenesis = (event) => {
     event.preventDefault();
-    if (active) {
+    if (networkActive) {
     } else {
       handleConnectWallet();
     }
   };
 
   const handleConnectWallet = () => {
-    activate(new InjectedConnector({}));
+    activateNetwork(injectedConnector);
   };
 
   return (
@@ -62,7 +66,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
@@ -107,7 +111,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
@@ -154,7 +158,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
@@ -194,7 +198,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
@@ -236,7 +240,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
@@ -281,7 +285,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
@@ -328,7 +332,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
@@ -368,7 +372,7 @@ const Membership = () => {
                       font-family="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {active ? 'MINT NOW' : 'CONNECT'}
+                        {networkActive ? 'MINT NOW' : 'CONNECT'}
                       </tspan>
                     </text>
                     <path
