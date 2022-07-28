@@ -135,6 +135,7 @@ const Membership = () => {
                       stroke="#fff"
                       strokeWidth="2"
                     />
+
                     <text
                       transform="translate(849.333 2867.299)"
                       fill="#fff"
@@ -142,7 +143,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
@@ -190,7 +191,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
@@ -240,7 +241,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
@@ -283,7 +284,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
@@ -328,7 +329,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
@@ -373,7 +374,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
@@ -420,7 +421,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
@@ -463,7 +464,7 @@ const Membership = () => {
                       fontFamily="BebasNeue, Bebas Neue"
                     >
                       <tspan x="36" y="36">
-                        {networkActive ? 'MINT NOW' : 'CONNECT'}
+                        MINT NOW
                       </tspan>
                     </text>
                     <path
