@@ -12,6 +12,7 @@ import { injectedConnector } from 'App';
 
 import { abi as WagmiClubAbi } from 'abis/WagmiClub.json';
 import { contractAddress, networkId } from 'config';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
 const Membership = () => {
   const {
@@ -32,21 +33,24 @@ const Membership = () => {
     event.preventDefault();
     const thumbnail = event.currentTarget;
     const videoCard = thumbnail.nextSibling;
-    console.dir(videoCard);
     thumbnail.style.display = 'none';
     videoCard.style.display = 'block';
     videoCard.play();
-    videoCard.addEventListener(
-      'ended',
-      function () {
-        videoCard.pause();
-        videoCard.style.display = 'none';
-        thumbnail.style.display = 'block';
-        videoCard.currentTime = 0;
-      },
-      false
-    );
   };
+
+  const handleVideoEnded = (event) => {
+    event.preventDefault();
+    const videoCard = event.currentTarget;
+    const thumbnail = videoCard.previousSibling;
+    videoCard.pause();
+    videoCard.style.display = 'none';
+    thumbnail.style.display = 'block';
+    videoCard.currentTime = 0;
+  };
+
+  React.useEffect(() => {
+    console.log('test');
+  }, []);
 
   const handleMintGenesis = (event) => {
     event.preventDefault();
@@ -182,7 +186,12 @@ const Membership = () => {
               >
                 <img src={genesisImg} alt="genesis" />
               </div>
-              <video muted="muted" autoPlay className="membervideo">
+              <video
+                muted="muted"
+                autoPlay
+                className="membervideo"
+                onEnded={handleVideoEnded}
+              >
                 <source
                   src="https://mywagmi.com/video/genesis.mp4"
                   type="video/mp4"
@@ -238,7 +247,12 @@ const Membership = () => {
               >
                 <img src={auroraImg} alt="aurora" />
               </div>
-              <video muted="muted" autoPlay className="membervideo">
+              <video
+                muted="muted"
+                autoPlay
+                className="membervideo"
+                onEnded={handleVideoEnded}
+              >
                 <source
                   src="https://mywagmi.com/video/aurora.mp4"
                   type="video/mp4"
@@ -380,7 +394,12 @@ const Membership = () => {
               >
                 <img src={novaImg} alt="nova" />
               </div>
-              <video muted="muted" autoPlay className="membervideo">
+              <video
+                muted="muted"
+                autoPlay
+                className="membervideo"
+                onEnded={handleVideoEnded}
+              >
                 <source
                   src="https://mywagmi.com/video/nova.mp4"
                   type="video/mp4"
@@ -433,7 +452,12 @@ const Membership = () => {
               >
                 <img src={supernovaImg} alt="supernova" />
               </div>
-              <video muted="muted" autoPlay className="membervideo">
+              <video
+                muted="muted"
+                autoPlay
+                className="membervideo"
+                onEnded={handleVideoEnded}
+              >
                 <source
                   src="https://mywagmi.com/video/supernova.mp4"
                   type="video/mp4"
