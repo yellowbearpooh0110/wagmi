@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="video">
           <video className="tv_video" autoPlay muted="muted">
             <source
-              src="https://mywagmi.com//video/video.mp4"
+              src="https://mywagmi.com/video/video.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
