@@ -39,13 +39,13 @@ const Footer = () => {
                   transform="translate(1134.714 9667.699)"
                   fill="none"
                   stroke="#54e8fa"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <text
                   transform="translate(1159 9693.877)"
                   fill="#fff"
-                  font-size="40"
-                  font-family="BebasNeue, Bebas Neue"
+                  fontSize="40"
+                  fontFamily="BebasNeue, Bebas Neue"
                 >
                   <tspan x="36" y="36">
                     GET MAIL!
@@ -56,7 +56,7 @@ const Footer = () => {
                   transform="translate(1134.714 9667.699)"
                   fill="none"
                   stroke="#2deccf"
-                  stroke-width="4"
+                  strokeWidth="4"
                 />
               </g>
             </svg>

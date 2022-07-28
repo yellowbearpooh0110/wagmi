@@ -8,7 +8,7 @@ const Banner = () => {
     <section>
       <div className="banner__main">
         <div className="video">
-          <video className="tv_video" autoplay muted="muted">
+          <video className="tv_video" autoPlay muted="muted">
             <source src="./video/video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

@@ -11,7 +11,7 @@ const Contactus = () => {
             <div className="contactus__form">
               <form>
                 <div className="frm__group">
-                  <label for="email" className="form-label">
+                  <label htmlFor="email" className="form-label">
                     Email address
                   </label>
                   <div className="diagonal">
@@ -26,7 +26,7 @@ const Contactus = () => {
                   </div>
                 </div>
                 <div className="frm__group">
-                  <label for="message" className="form-label">
+                  <label htmlFor="message" className="form-label">
                     Message
                   </label>
                   <div className="diagonal">
@@ -56,13 +56,13 @@ const Contactus = () => {
                           transform="translate(710.964 8045.699)"
                           fill="none"
                           stroke="#62ec2d"
-                          stroke-width="2"
+                          strokeWidth="2"
                         />
                         <text
                           transform="translate(735.25 8071.877)"
                           fill="#fff"
-                          font-size="40"
-                          font-family="BebasNeue, Bebas Neue"
+                          fontSize="40"
+                          fontFamily="BebasNeue, Bebas Neue"
                         >
                           <tspan x="62.5" y="36">
                             SEND
@@ -73,7 +73,7 @@ const Contactus = () => {
                           transform="translate(709.964 8045.7)"
                           fill="none"
                           stroke="#2deccf"
-                          stroke-width="4"
+                          strokeWidth="4"
                         />
                       </g>
                     </svg>

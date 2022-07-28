@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Mint from './pages/mint';
 
@@ -37,13 +39,27 @@ const App = () => {
   }, [activateNetwork, networkError, networkActive]);
 
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Mint />} />
-        </Routes>
-      </Router>
-    </div>
+    <>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+      <div className="App">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Mint />} />
+          </Routes>
+        </Router>
+      </div>
+    </>
   );
 };
 
